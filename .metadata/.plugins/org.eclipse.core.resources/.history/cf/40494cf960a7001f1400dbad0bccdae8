@@ -1,0 +1,45 @@
+package student;
+
+public class Student {
+	private String name;
+	private int age;
+	private double grade;
+	public Student(String name,int age,double grade) {
+		this.name = name;
+		this.age = age;
+		this.grade = grade;
+	}
+	public getName() {
+		return name;
+	}
+	public getAge() {
+		return age;
+	}
+	public getGrade() {
+		return grade;
+	}
+	public setName(String name) {
+		this.name = name;
+	}
+	public setAge(int age) {
+		this.age = age;
+	}
+	public setGrade(double grade) {
+		this.grade = grade;
+	}
+	public isEligibleForGraduation(double grade) {
+		if (grade >= 5)  System.out.println("Khong du dieu kien");
+		else System.out.println("Du dieu kien");
+	}
+	public displayInfo() {
+		System.out.println("name : " + name);
+		System.out.println("age : " + age);
+		System.out.println("grade : " + grade);
+	}
+}
+public class Main {
+	public static void main(String[] agrs) {
+		Student student1 = new Student ("An",15,4.3);
+		Student student2 = new Student ("Lan",15,5.3);
+	}
+}

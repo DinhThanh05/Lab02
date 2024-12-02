@@ -1,0 +1,38 @@
+package aiMs;
+
+public class TestPassingParameter {
+    public static void main(String[] args) {
+        // Tạo hai đối tượng DigitalVideoDisc
+    	DigitalVideoDisc dvd1 = new DigitalVideoDisc("Faker", "Science Fiction", "Christopher Nolan", 148, 19.99f);
+        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Gumayusi", "Crime", "Francis Ford Coppola", 175, 14.99f);
+
+
+        // Truyền dvd1 và dvd2 vào phương thức swap()
+        System.out.println("Before swap:");
+        System.out.println("DVD1 Title: " + dvd1.getTitle());
+        System.out.println("DVD2 Title: " + dvd2.getTitle());
+
+        swap(dvd1, dvd2);
+
+        System.out.println("After swap:");
+        System.out.println("DVD1 Title: " + dvd1.getTitle());
+        System.out.println("DVD2 Title: " + dvd2.getTitle());
+
+        // Gọi phương thức changeTitle()
+        changeTitle(dvd1, "New Title");
+        System.out.println("After changeTitle:");
+        System.out.println("DVD1 Title: " + dvd1.getTitle());
+    }
+
+    // Phương thức swap (hoán đổi hai đối tượng)
+    public static void swap(DigitalVideoDisc o1, DigitalVideoDisc o2) {
+        DigitalVideoDisc temp = o1;
+        o1 = o2;
+        o2 = temp;
+    }
+
+    // Phương thức changeTitle (thay đổi title của một đối tượng)
+    public static void changeTitle(DigitalVideoDisc dvd, String newTitle) {
+        dvd.setTitle(newTitle);
+    }
+}

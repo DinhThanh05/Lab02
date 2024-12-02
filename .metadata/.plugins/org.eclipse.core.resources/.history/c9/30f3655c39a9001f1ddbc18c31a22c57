@@ -1,0 +1,25 @@
+package aiMs;
+
+public class CartTest {
+    public static void main(String[] args) {
+        Cart cart = new Cart();
+
+        // Tạo các DVD
+        DigitalVideoDisc dvd1 = new DigitalVideoDisc("Faker", "Science Fiction", "Christopher Nolan", 148, 19.99f);
+        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Gumayusi", "Crime", "Francis Ford Coppola", 175, 14.99f);
+        DigitalVideoDisc dvd1 = new DigitalVideoDisc("Zeus", "Science Fiction", "Christopher Nolan", 148, 19.99f);
+        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Keria", "Crime", "Francis Ford Coppola", 175, 14.99f);
+        DigitalVideoDisc dvd1 = new DigitalVideoDisc("Oner", "Science Fiction", "Christopher Nolan", 148, 19.99f);
+        
+        // Kiểm tra phương thức nhận mảng tham số
+        DigitalVideoDisc[] dvdArray = {dvd1, dvd2};
+        cart.addDigitalVideoDisc(dvdArray); // Thêm danh sách DVD
+
+        // Kiểm tra phương thức nhận số lượng tham số tùy ý
+        cart.addDigitalVideoDisc(dvd3, dvd4); // Thêm nhiều DVD tùy ý
+
+        // In giỏ hàng để kiểm tra kết quả
+        cart.printCart();
+    }
+}
+

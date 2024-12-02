@@ -1,0 +1,12 @@
+package student;
+
+
+
+public class  Main {
+	public static void main(String[] agrs) {
+		Student student1 = new Student ("An",15,4.3);
+		Student student2 = new Student ("Lan",15,5.3);
+		student1.displayInfo();
+		
+	}
+}
