@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="javafx-sdk-23.0">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://C:/javafx-sdk-23.0.1" />
+    </SOURCES>
+    <excluded>
+      <root url="jar://C:/javafx-sdk-23.0.1/src.zip!/javafx.swing" />
+    </excluded>
+    <jarDirectory url="file://C:/javafx-sdk-23.0.1" recursive="false" type="SOURCES" />
+  </library>
+</component>

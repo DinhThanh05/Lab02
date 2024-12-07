@@ -1,0 +1,22 @@
+/* styles.css */
+
+/* Định dạng cho nút bấm */
+.button {
+    -fx-background-color: linear-gradient(#4CAF50, #45a049);
+    -fx-text-fill: white;
+    -fx-padding: 10 20 10 20;
+    -fx-font-size: 14px;
+    -fx-background-radius: 10px;
+}
+
+/* Định dạng cho vòng tròn (Router) */
+.circle {
+    -fx-fill: #3498db;
+    -fx-stroke: #2c3e50;
+    -fx-stroke-width: 2px;
+}
+
+.line {
+    -fx-stroke: #ecf0f1;
+    -fx-stroke-width: 2px;
+}
