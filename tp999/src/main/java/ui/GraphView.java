@@ -29,7 +29,6 @@ public class GraphView extends Canvas {
             // Vẽ node (mỗi node là một điểm)
             gc.setFill(Color.BLUE);  // Màu sắc của node
             gc.fillOval(nodeId * 50, 100, 20, 20);  // Dùng nodeId làm tọa độ ví dụ
-
             // Vẽ các edges (liên kết) của node
             for (Link link : links) {
                 Integer toNodeId = link.getTo();

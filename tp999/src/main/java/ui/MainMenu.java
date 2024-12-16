@@ -110,16 +110,26 @@ public class MainMenu extends BorderPane {
                 // Sau khi chạy thuật toán Dijkstra, mô phỏng và hiển thị đồ thị
                 simulationScreen.updateSimulation(dijkstraResult);
 
-                // Tạo một cửa sổ mới để hiển thị đồ thị và mô phỏng
-                Stage simulationStage = new Stage();
-                VBox simulationLayout = new VBox();
-                simulationLayout.getChildren().add(simulationScreen);  // Thêm SimulationScreen vào layout
+//                // Tạo một cửa sổ mới để hiển thị đồ thị và mô phỏng
+//                Stage simulationStage = new Stage();
+//                VBox simulationLayout = new VBox();
+//                simulationLayout.getChildren().add(simulationScreen);  // Thêm SimulationScreen vào layout
+//
+//                // Tạo scene cho cửa sổ mô phỏng
+//                Scene simulationScene = new Scene(simulationLayout, 800, 600);
+//                simulationStage.setTitle("Simulation - Shortest Path");
+//                simulationStage.setScene(simulationScene);
+//                simulationStage.show();
 
-                // Tạo scene cho cửa sổ mô phỏng
-                Scene simulationScene = new Scene(simulationLayout, 800, 600);
-                simulationStage.setTitle("Simulation - Shortest Path");
-                simulationStage.setScene(simulationScene);
-                simulationStage.show();
+                Stage stage = new Stage();
+                VBox layout = new VBox();
+                graphView.drawGraph();
+                layout.getChildren().add(graphView);
+                Scene scene = new Scene(layout, 800, 600);
+
+                stage.setTitle("Simulation - Shortest Path");
+                stage.setScene(scene);
+                stage.show();
                 break;
             case "Bellman-Ford":
                 outputArea.appendText("Bellman-Ford algorithm not implemented yet.\n");

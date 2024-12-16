@@ -1,6 +1,7 @@
 package ui;
 
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import model.Graph;
 import model.Link;
@@ -31,6 +32,8 @@ public class SimulationScreen extends javafx.scene.layout.Pane {
             for (Link link : links) {
                 int from = link.getFrom();
                 int to = link.getTo();
+
+//                System.out.println(from + " " + to);
                 drawLink(from, to);
             }
         }
@@ -45,7 +48,6 @@ public class SimulationScreen extends javafx.scene.layout.Pane {
 
     public void updateSimulation(Map<Integer, Double> algorithmResult) {
         this.algorithmResult = algorithmResult;  // Lưu kết quả thuật toán
-
         // Vẽ lại các liên kết với màu sắc thay đổi tùy theo kết quả thuật toán
         getChildren().clear();  // Xóa các node cũ trong Pane
 
@@ -74,6 +76,13 @@ public class SimulationScreen extends javafx.scene.layout.Pane {
     }
 
     private void drawLinkWithColor(int from, int to, Color color) {
+        // Vẽ node
+//        Circle nodeFrom = new Circle(from * 50, 100, 20);
+//        Circle nodeTo = new Circle(to * 50, 100, 20);
+//
+//        getChildren().add(nodeFrom);
+//        getChildren().add(nodeTo);
+
         // Vẽ đường nối giữa các router với màu sắc được chỉ định
         Line line = new Line(from * 50, from * 50, to * 50, to * 50);
         line.setStroke(color);  // Đặt màu cho đường nối
