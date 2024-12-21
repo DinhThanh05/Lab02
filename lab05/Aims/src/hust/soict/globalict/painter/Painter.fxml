@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="hust.soict.globalict.painter.PainterController">
+    <!-- Khu vực bên trái (menu công cụ) -->
+    <left>
+        <VBox spacing="10" alignment="CENTER" BorderPane.alignment="CENTER">
+            <Button text="Clear" onAction="#clearButtonPressed" maxWidth="100"/>
+        </VBox>
+    </left>
+
+    <!-- Khu vực trung tâm (khu vực vẽ) -->
+    <center>
+        <Pane fx:id="drawingAreaPane" style="-fx-background-color: white;"
+              onMouseDragged="#drawingAreaMouseDragged"/>
+    </center>
+</BorderPane>

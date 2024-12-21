@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label text="Shopping Cart" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+        <TableView fx:id="tblMedia">
+            <columns>
+                <TableColumn fx:id="colMediaTitle" text="Title" />
+                <TableColumn fx:id="colMediaCategory" text="Category" />
+                <TableColumn fx:id="colMediaCost" text="Cost" />
+            </columns>
+        </TableView>
+        <Label fx:id="lblTotalCost" text="Total Cost: $" style="-fx-font-size: 18px;" />
+        <HBox spacing="10">
+            <Button text="Back to Store" onAction="#backToStore" />
+            <Button text="Place Order" onAction="#placeOrder" />
+            <Button text="Exit" onAction="#exitApp" />
+        </HBox>
+    </children>
+</VBox>
